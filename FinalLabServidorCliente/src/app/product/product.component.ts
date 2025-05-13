@@ -52,12 +52,14 @@ export class ProductComponent implements OnInit {
   onSubmit(): void {
     this.productService.create(this.newProduct).subscribe(() => {
       this.newProduct = { name: '', code: '', stock: 0, productTypeId: 1 };
+      alert('Producto creado');
       this.loadProducts();
     });
   }
 
   deleteProduct(id: number): void {
     this.productService.delete(id).subscribe(() => {
+      alert('Producto eliminado');
       this.loadProducts();
     });
   }

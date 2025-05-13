@@ -11,3 +11,9 @@ body {
     background-color: rgb(51, 44, 44);
     padding: 3rem;
 }
+
+.underline-title {
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+}

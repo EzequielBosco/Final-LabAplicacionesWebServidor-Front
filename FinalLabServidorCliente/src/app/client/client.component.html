@@ -1,4 +1,4 @@
-<h2>Agregar Cliente</h2>
+<h2 class="underline-title">Agregar Cliente</h2>
 <form (ngSubmit)="onSubmit()">
   <label for="firstName">Nombre:</label>
   <input id="firstName" [(ngModel)]="newClient.firstName" name="firstName" required placeholder="Ingrese el nombre" />
@@ -37,6 +37,7 @@
       <p><strong>Email:</strong> {{ client.email }}</p>
       
       <button (click)="deleteClient(client.id)">Eliminar</button>
+      <button [routerLink]="['/clients', client.id, 'edit']">Editar</button>
       <button [routerLink]="['/clients', client.id]">Ver Detalle</button>
     </div>
   </div>
